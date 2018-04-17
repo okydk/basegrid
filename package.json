@@ -1,0 +1,18 @@
+{
+  "name": "basegrid",
+  "version": "0.0.1",
+  "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
+  "main": "dist/basegrid.css",
+  "scripts": {
+    "build": "parcel build basegrid.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "basegrid",
+    "css-grid",
+    "grid",
+    "grid.studio"
+  ],
+  "author": "Stefan Rasmussen",
+  "license": "ISC"
+}

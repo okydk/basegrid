@@ -2,7 +2,7 @@
   "name": "basegrid",
   "version": "0.0.1",
   "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
-  "main": "dist/basegrid.css",
+  "main": "dist/basegrid.min.css",
   "scripts": {
     "build": "parcel build basegrid.css",
     "test": "echo \"Error: no test specified\" && exit 1"

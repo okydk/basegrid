@@ -2,36 +2,107 @@
 <html>
 <head>
 	<title>basegrid</title>
-	<link rel="stylesheet" href="https://unpkg.com/basegrid">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 	<style>
-		/*.grid{
-			transform: rotate3d(-1, 1, -0.29, 45deg) translateY(150px);
+		.demo{
+			transform: rotate3d(-1, 1, -0.29, 45deg);
 			transform-style: preserve-3d;
+			--gw: 40vw;
 		}
-		.grid>div{
+		.demo>div{
 			transform: translateZ(0);
+			background: linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1));
 			transition: transform 300ms;
 		}
-		.grid>div:hover{
-			transform: translateZ(100px);
-		}*/
+		.demo>div:hover{
+			transform: translateZ(10px);
+		}
+		html,body{
+			margin: 0;
+			font-family: "Helvetica Neue";
+			font-weight: 300;
+			line-height: 1.5em;
+		}
+		h1{
+			font-weight: 400;
+		}
+		.wrap > div{
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+		h1 span{
+			color: rgba(0,0,0,0.2);
+			font-size: 0.7em;
+		}
+		button{
+			padding: 0.5em 1em;
+			border: 1px solid #333;
+			background: transparent;
+			font-size: 1em;
+			border-radius: 3em;
+			color: #333;
+		}
 	</style>
 </head>
 <body>
-	<h1>Docs?</h1>
-	<div class="basegrid fixed" style="--w:3; --h:3;">
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
+	<div id="app" v-cloak>
+		<div class="basegrid wrap fixed" style="--gw: 100vw; --gg: 0px;">
+			<div style="--w:6; height: 100vh;">
+				<div class="basegrid demo fixed" :style="grid">
+					<div style="--w:6"></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style="--w:6; --h:6"></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+					<div style=""></div>
+				</div>
+			</div>
+			<div style="--w:6; height: 100vh;">
+				<div class="info">
+					<h1>basegrid <span>(0.6Kb)</span></h1>
+					<p>The smallest and most flexible grid-system possible.</p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+					Eos debitis nesciunt fuga eligendi iure reiciendis soluta deserunt <br>
+					blanditiis maxime veritatis sequi numquam necessitatibus illum facilis quam nostrum nam, magnam aliquam.</p>
+					<p>
+						<input v-model="gg" type="range" min="0" max="30">
+						<input v-model="gc" type="range" min="10" max="20">
+					</p>
+					<p>
+						<a class="github-button" href="https://github.com/okydk/basegrid/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download okydk/basegrid on GitHub">Download</a>
+						<a class="github-button" href="https://github.com/okydk/basegrid" data-icon="octicon-star" data-size="large" aria-label="Star okydk/basegrid on GitHub">Star</a>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="basegrid fixed" style="--w:2; --h:2;">
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
-		<div style=""></div>
-	</div>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				gg: 10,
+				gc: 12,
+			},
+			computed: {
+				grid () {
+					return {
+						'--w': 3,
+						'--h': 3,
+						'--gc': this.gc,
+						'--gg': this.gg + 'px'
+					}
+				}
+			}
+		})
+	</script>
 </body>
 </html>

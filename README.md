@@ -1,5 +1,5 @@
-# Basegrid [![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid) [![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
-Dynamic CSS-grid working in all major browsers.
+# Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid) [![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
+Dynamic CSS-grid built for the future but usefull in the present (working in all major browsers).
 
 ## Features
 - Lightweight (< 0.5KB)
@@ -19,8 +19,16 @@ Dynamic CSS-grid working in all major browsers.
 Include css ```https://unpkg.com/basegrid```
 
 Create grid and set attributes (either via css files og directly)
-```
+```html
+// Include css
+<link rel="stylesheet" href="https://unpkg.com/basegrid">
+// Create one or more grids
 <div class="basegrid">
+	<div style="--w:6">6 columns wide</div>
+	<div style="--w:6">6 columns wide</div>
+	<div style="--w:4">4 columns wide</div>
+	<div style="--w:4">4 columns wide</div>
+	<div style="--w:4">4 columns wide</div>
 </div>
 ```
 

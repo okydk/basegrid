@@ -1,6 +1,5 @@
-# Basegrid
-[![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid)
-[![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
+# Basegrid [![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid) [![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
+Dynamic CSS-grid working in all major browsers.
 
 ## Features
 - Lightweight (< 0.5KB)

@@ -1,4 +1,5 @@
-# Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid) [![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
+# Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](https://www.npmjs.com/package/basegrid) [![GitHub version](https://badge.fury.io/gh/basegrid.svg)](https://github.com/okydk/basegrid)[![](https://data.jsdelivr.com/v1/package/npm/basegrid/badge?style=rounded)](https://www.jsdelivr.com/package/npm/basegrid)
+
 Dynamic CSS-grid built for the future but usefull in the present (working in all major browsers).
 
 ## Features

@@ -1,4 +1,6 @@
-# Get started
+# Basegrid
+[![NPM version](https://badge.fury.io/js/basegrid.svg)](http://badge.fury.io/js/basegrid)
+[![GitHub version](https://badge.fury.io/gh/basegrid.svg)](http://badge.fury.io/gh/basegrid)
 
 ## Features
 - Lightweight (< 0.5KB)

@@ -18,17 +18,30 @@ Built for the future but usefull in the present (working in all major browsers).
 	- x: Column position
 	- y: Row position
 
-## Get started
-Create grid and set attributes (either via css files og directly)
+## Examples
+Include css either via CDN or install via NPM.
 ```html
-// Include css
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
-// Create one or more grids
+```
+
+Grid samples
+```html
+// Simple grid
+<div class="basegrid"></div>
+
+// Fixed grid (equal width and height)
+<div class="basegrid fixed"></div>
+
+// Responsive grid
+<div class="basegrid res"></div>
+```
+
+Section samples (using fixed grid)
+```html
+<!-- Fixed grid with  -->
 <div class="basegrid">
-	<div style="--w:6">6 columns wide</div>
-	<div style="--w:6">6 columns wide</div>
-	<div style="--w:4">4 columns wide</div>
-	<div style="--w:4">4 columns wide</div>
-	<div style="--w:4">4 columns wide</div>
+	<div style="--w:5;">5 columns wide</div>
+	<div style="--w:5;--h:5;">And 5 high</div>
+	<div style="--w:5;--h:5;--x:3;--y:3;">With fixed position</div>
 </div>
 ```

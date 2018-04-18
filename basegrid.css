@@ -14,20 +14,14 @@
   grid-column: var(--x) / span var(--w);
 	grid-row: var(--y) / span var(--h);
 }
-@media screen and (min-width: 1000px) {
-	.basegrid.fixed{
-		grid-auto-rows: var(--t);
-	}
-}
 @media screen and (max-width: 1000px) {
-	.basegrid{
+	.basegrid.res{
 		--w: 100vw !important;
 		grid-auto-rows: none;
 	}
 }
 @media screen and (max-width: 600px) {
-	.basegrid{
+	.basegrid.res{
 		display: block;
-		margin: 0;
 	}
 }

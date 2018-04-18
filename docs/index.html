@@ -50,21 +50,28 @@
 			border: none;
 			width: 400px;
 			height: 3em;
-			font-size: 0.8em;
+			font-size: 0.7em;
 			padding: 1em;
 			resize: none;
 			border-radius: 3px;
 			font-family: inherit;
 			font-weight: inherit;
 		}
-		[v-cloak] {display: none}
+		::-moz-selection{
+			background: #333;
+			color: #fff;
+		}
+		::selection{
+			background: #333;
+			color: #fff;
+		}
 	</style>
 </head>
 <body>
 	<div id="app">
 		<div class="basegrid wrap fixed" style="--gw: 100vw; --gg: 0px;">
 			<div style="--w:6; height: 100vh;">
-				<div v-cloak class="basegrid demo fixed" :style="grid">
+				<div class="basegrid demo fixed" v-if="type === 'fixed'" :style="grid">
 					<div style="--w:6"></div>
 					<div style=""></div>
 					<div style=""></div>
@@ -78,9 +85,67 @@
 					<div style=""></div>
 					<div style=""></div>
 				</div>
+				<div class="basegrid demo fixed" v-if="type === 'masonry'" :style="grid">
+					<div style="--h:2"></div>
+					<div style="--h:5"></div>
+					<div style="--h:3"></div>
+					<div style="--h:7"></div>
+					<div style="--h:4"></div>
+					<div style="--h:3"></div>
+					<div style="--h:5"></div>
+					<div style="--h:3"></div>
+					<div style="--h:3"></div>
+					<div style="--h:5"></div>
+				</div>
+				<div class="basegrid demo" v-if="type === 'simple'" :style="grid">
+					<div style="--w:12"></div>
+					<div style="--w:6"></div>
+					<div style="--w:6"></div>
+					<div style="--w:4"></div>
+					<div style="--w:4"></div>
+					<div style="--w:4"></div>
+					<div style="--w:3"></div>
+					<div style="--w:3"></div>
+					<div style="--w:3"></div>
+					<div style="--w:3"></div>
+					<div style="--w:2"></div>
+					<div style="--w:2"></div>
+					<div style="--w:2"></div>
+					<div style="--w:2"></div>
+					<div style="--w:2"></div>
+					<div style="--w:2"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+					<div style="--w:1"></div>
+				</div>
+				<div class="basegrid demo fixed" v-if="type === 'layout'" :style="grid">
+					<div style="--x:1;--y:1;--w:12;--h:3;padding:var(--gg)">
+						LOGO + Navigation
+					</div>
+					<div style="--x:1;--y:4;--w:4;--h:9;padding:var(--gg)">
+						Sidebar
+					</div>
+					<div style="--x:5;--y:4;--w:8;--h:9;padding:var(--gg)">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cupiditate dolorem cum, repudiandae minus! Inventore harum et velit, mollitia eaque neque delectus facere voluptates assumenda. Aliquid iusto pariatur rem ex.
+					</div>
+				</div>
+				<div class="basegrid demo fixed" v-if="type === 'overlap'" :style="grid">
+					<div style="--x:1;--y:1;--w:8;--h:8"></div>
+					<div style="--x:3;--y:3;--w:8;--h:8"></div>
+					<div style="--x:5;--y:5;--w:8;--h:8"></div>
+				</div>
 			</div>
 			<div style="--w:6; height: 100vh;">
-				<div v-cloak class="info">
+				<div class="info">
 					<h1>basegrid <span>(0.6KB)</span></h1>
 					<p>The smallest and most flexible grid-system possible.</p>
 					<p>
@@ -88,18 +153,25 @@
 						(Firefox 31+, Chrome 49+, Safari 9.1+, Opera 36+, Edge 16+)
 					</p>
 					<p>
-						<input v-model="gg" type="range" min="0" max="30">
-						<input v-model="gc" type="range" min="10" max="20">
+						<label>Gap:</label><input v-model="gg" type="range" min="0" max="30">
+						<label>Columns:</label><input v-model="gc" type="range" min="10" max="20"><br>
+						<select v-model="type">
+							<option value="fixed">Fixed grid</option>
+							<option value="masonry">Masonry grid</option>
+							<option value="simple">Simple grid</option>
+							<option value="layout">Layout sample</option>
+							<option value="overlap">Overlap sample</option>
+						</select>
 						<input type="checkbox" v-model="demo"> Include demo content
 					</p>
 						<textarea v-if="demo"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
-<div class="basegrid" style="--gg:{{gg}}px; --gc:{{gc}}px;">
+<div class="basegrid" style="--gc:{{gc}}; --gg:{{gg}}px;">
 	<div style="--w:4;">4 columns wide</div>
 	<div style="--w:8;">8 columns wide</div>
 	<div style="--w:8;">8 columns wide</div>
 </div></textarea>
 						<textarea v-else><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
-<div class="basegrid" style="--gg:{{gg}}px; --gc:{{gc}}px;"></div></textarea>
+<div class="basegrid" style="--gc:{{gc}}; --gg:{{gg}}px;"></div></textarea>
 					<p>
 						<a class="github-button" href="https://github.com/okydk/basegrid/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download okydk/basegrid on GitHub">Download</a>
 						<a class="github-button" href="https://github.com/okydk/basegrid" data-icon="octicon-star" data-size="large" aria-label="Star okydk/basegrid on GitHub">Star</a>
@@ -115,12 +187,13 @@
 				demo: false,
 				gg: 10,
 				gc: 12,
+				type: 'fixed'
 			},
 			computed: {
 				grid () {
 					return {
-						'--w': 1,
-						'--h': 1,
+						'--w': 3,
+						'--h': 3,
 						'--gc': this.gc,
 						'--gg': this.gg + 'px'
 					}

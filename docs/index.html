@@ -22,7 +22,7 @@
 		html,body{
 			margin: 0;
 			font-family: "Helvetica Neue";
-			font-weight: 300;
+			font-weight: 400;
 			line-height: 1.5em;
 		}
 		h1{
@@ -45,13 +45,26 @@
 			border-radius: 3em;
 			color: #333;
 		}
+		textarea{
+			background: rgba(0,0,0,0.1);
+			border: none;
+			width: 400px;
+			height: 3em;
+			font-size: 0.8em;
+			padding: 1em;
+			resize: none;
+			border-radius: 3px;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+		[v-cloak] {display: none}
 	</style>
 </head>
 <body>
-	<div id="app" v-cloak>
+	<div id="app">
 		<div class="basegrid wrap fixed" style="--gw: 100vw; --gg: 0px;">
 			<div style="--w:6; height: 100vh;">
-				<div class="basegrid demo fixed" :style="grid">
+				<div v-cloak class="basegrid demo fixed" :style="grid">
 					<div style="--w:6"></div>
 					<div style=""></div>
 					<div style=""></div>
@@ -67,16 +80,26 @@
 				</div>
 			</div>
 			<div style="--w:6; height: 100vh;">
-				<div class="info">
-					<h1>basegrid <span>(0.6Kb)</span></h1>
+				<div v-cloak class="info">
+					<h1>basegrid <span>(0.6KB)</span></h1>
 					<p>The smallest and most flexible grid-system possible.</p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-					Eos debitis nesciunt fuga eligendi iure reiciendis soluta deserunt <br>
-					blanditiis maxime veritatis sequi numquam necessitatibus illum facilis quam nostrum nam, magnam aliquam.</p>
+					<p>
+						Requires CSS-grid and CSS-variables. <br>
+						(Firefox 31+, Chrome 49+, Safari 9.1+, Opera 36+, Edge 16+)
+					</p>
 					<p>
 						<input v-model="gg" type="range" min="0" max="30">
 						<input v-model="gc" type="range" min="10" max="20">
+						<input type="checkbox" v-model="demo"> Include demo content
 					</p>
+						<textarea v-if="demo"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
+<div class="basegrid" style="--gg:{{gg}}px; --gc:{{gc}}px;">
+	<div style="--w:4;">4 columns wide</div>
+	<div style="--w:8;">8 columns wide</div>
+	<div style="--w:8;">8 columns wide</div>
+</div></textarea>
+						<textarea v-else><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid">
+<div class="basegrid" style="--gg:{{gg}}px; --gc:{{gc}}px;"></div></textarea>
 					<p>
 						<a class="github-button" href="https://github.com/okydk/basegrid/archive/master.zip" data-icon="octicon-cloud-download" data-size="large" aria-label="Download okydk/basegrid on GitHub">Download</a>
 						<a class="github-button" href="https://github.com/okydk/basegrid" data-icon="octicon-star" data-size="large" aria-label="Star okydk/basegrid on GitHub">Star</a>
@@ -89,14 +112,15 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
+				demo: false,
 				gg: 10,
 				gc: 12,
 			},
 			computed: {
 				grid () {
 					return {
-						'--w': 3,
-						'--h': 3,
+						'--w': 1,
+						'--h': 1,
 						'--gc': this.gc,
 						'--gg': this.gg + 'px'
 					}

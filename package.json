@@ -1,8 +1,8 @@
 {
   "name": "basegrid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
-  "main": "dist/basegrid.min.css",
+  "main": "basegrid.css",
   "scripts": {
     "build": "parcel build basegrid.css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,5 @@
     "grid.studio"
   ],
   "author": "Stefan Rasmussen",
-  "license": "ISC"
+  "license": "MIT"
 }

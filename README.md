@@ -1,9 +1,11 @@
 # Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](https://www.npmjs.com/package/basegrid) [![](https://data.jsdelivr.com/v1/package/npm/basegrid/badge?style=rounded)](https://www.jsdelivr.com/package/npm/basegrid)
 
-Dynamic CSS-grid built for the future but usefull in the present (working in all major browsers).
+The smallest and most flexible grid-system possible.
+
+Built for the future but usefull in the present (working in all major browsers).
 
 ## Features
-- Lightweight (< 0.5KB)
+- Lightweight (0.6KB)
 - No dependencies
 - Flexible AF
 - Dynamic grid attributes
@@ -30,6 +32,3 @@ Create grid and set attributes (either via css files og directly)
 	<div style="--w:4">4 columns wide</div>
 </div>
 ```
-
-## Building
-Install ```parcel``` and run ```yarn build```

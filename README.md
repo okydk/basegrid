@@ -38,10 +38,20 @@ Grid samples
 
 Section samples (using fixed grid)
 ```html
-<!-- Fixed grid with  -->
+<!-- Fixed grid with: -->
 <div class="basegrid">
 	<div style="--w:5;">5 columns wide</div>
 	<div style="--w:5;--h:5;">And 5 high</div>
 	<div style="--w:5;--h:5;--x:3;--y:3;">With fixed position</div>
+</div>
+
+<!-- Variable height and commen width (masonry) -->
+<div class="basegrid" style="--w:4;">
+	<div style="--h:3;">3 high</div>
+	<div style="--h:2;">2 high</div>
+	<div style="--h:4;">4 high</div>
+	<div style="--h:3;">3 high</div>
+	<div style="--h:4;">4 high</div>
+	<div style="--h:2;">2 high</div>
 </div>
 ```

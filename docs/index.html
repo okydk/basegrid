@@ -67,6 +67,7 @@
 			border-radius: 3px;
 			font-family: inherit;
 			font-weight: inherit;
+			max-width: 90%;
 		}
 		::-moz-selection{
 			background: #333;
@@ -79,20 +80,19 @@
 		.basegrid.wrap>div{
 			height: 100vh;
 		}
-		@media screen and (max-width: 760px){
-			.basegrid.wrap{
-				--gc: 6;
-			}
+		@media screen and (max-width: 600px){
 			.basegrid.wrap>div{
 				height: 40vh;
-				--h: 4;
+			}
+			.info{
+				width: 90vw;
 			}
 		}
 	</style>
 </head>
 <body>
 	<div id="app">
-		<div class="basegrid wrap fixed" style="--gw: 100vw; --gg: 0px;">
+		<div class="basegrid wrap fixed res" style="--gw: 100vw; --gg: 0px;">
 			<div style="--w:6">
 				<div class="basegrid demo fixed" v-if="type === 'fixed'" :style="grid">
 					<div style="--w:6"></div>
@@ -176,8 +176,12 @@
 						(Firefox 31+, Chrome 49+, Safari 9.1+, Opera 36+, Edge 16+)
 					</p>
 					<p>
-						<label>Gap:</label><input v-model="gg" type="range" min="0" max="30">
-						<label>Columns:</label><input v-model="gc" type="range" min="10" max="20"><br>
+						<p>
+							<label>Gap:</label><input v-model="gg" type="range" min="0" max="30">
+						</p>
+						<p>
+							<label>Columns:</label><input v-model="gc" type="range" min="10" max="20"><br>
+						</p>
 						<select v-model="type">
 							<option value="fixed">Fixed grid</option>
 							<option value="masonry">Masonry grid</option>

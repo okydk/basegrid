@@ -9,14 +9,15 @@ Built for the future but usefull in the present (working in all major browsers).
 - No dependencies
 - Flexible AF
 - Dynamic grid attributes
-	- gw: Grid width
-	- gc: Grid columns
-	- gg: Grid gap
+	- gw: Grid width (940px)
+	- gg: Grid gap (20px)
+	- gc: Grid columns (12)
+	- gr: Grid row height (auto)
 - Dynamic section attributes
-	- w: Width
-	- h: Height
-	- x: Column position
-	- y: Row position
+	- w: Width (1)
+	- h: Height (1)
+	- x: Column position (auto)
+	- y: Row position (auto)
 
 ## Examples
 Include css either via CDN or install via NPM.

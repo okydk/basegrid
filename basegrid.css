@@ -1,5 +1,5 @@
 :root{
-	--gw: 940px; --gg: 20px; --gc: 12;
+	--gw: 940px; --gg: 20px; --gc: 12; --gr: auto;
 	--x: auto; --y: auto; --w: 1; --h: 1;
 }
 .basegrid{
@@ -8,11 +8,15 @@
 	display: grid;
 	grid-template-columns: repeat(var(--gc), var(--t));
 	grid-gap: var(--gg);
+	grid-auto-rows: var(--gr);
 	grid-auto-flow: row dense;
 }
 .basegrid>div{
   grid-column: var(--x) / span var(--w);
 	grid-row: var(--y) / span var(--h);
+}
+.basegrid.fixed{
+	grid-auto-rows: var(--t);
 }
 @media screen and (max-width: 1000px) {
 	.basegrid.res{

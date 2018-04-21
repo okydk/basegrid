@@ -1,12 +1,8 @@
 {
   "name": "basegrid",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
   "main": "basegrid.css",
-  "scripts": {
-    "build": "parcel build basegrid.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "basegrid",
     "css-grid",

@@ -1,8 +1,8 @@
 # Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](https://www.npmjs.com/package/basegrid) [![](https://data.jsdelivr.com/v1/package/npm/basegrid/badge?style=rounded)](https://www.jsdelivr.com/package/npm/basegrid)
 
 The smallest and most flexible grid-system possible.
-
-Built for the future but usefull in the present (working in all major browsers).
+> Requires CSS-grid and CSS-variables.
+> (Firefox 31+, Chrome 49+, Safari 9.1+, Opera 36+, Edge 16+)
 
 ## Features
 - Lightweight (0.6KB)

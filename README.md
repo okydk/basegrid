@@ -55,4 +55,11 @@ Section samples (using fixed grid)
 	<div style="--h:4;">4 high</div>
 	<div style="--h:2;">2 high</div>
 </div>
+
+<!-- Overlapping with fixed coordinates and size -->
+<div class="basegrid" style="--w:4;">
+	<div style="--x:1;--y:1;--w:8;--h:8"></div>
+	<div style="--x:3;--y:3;--w:8;--h:8"></div>
+	<div style="--x:5;--y:5;--w:8;--h:8"></div>
+</div>
 ```

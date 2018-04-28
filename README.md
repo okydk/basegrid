@@ -40,14 +40,14 @@ Grid samples
 Section samples (using fixed grid)
 ```html
 <!-- Fixed grid with: -->
-<div class="basegrid">
+<div class="basegrid fixed">
 	<div style="--w:5;">5 columns wide</div>
 	<div style="--w:5;--h:5;">And 5 high</div>
 	<div style="--w:5;--h:5;--x:3;--y:3;">With fixed position</div>
 </div>
 
 <!-- Variable height and commen width (masonry) -->
-<div class="basegrid" style="--w:4;">
+<div class="basegrid fixed" style="--w:4;">
 	<div style="--h:3;">3 high</div>
 	<div style="--h:2;">2 high</div>
 	<div style="--h:4;">4 high</div>
@@ -57,7 +57,7 @@ Section samples (using fixed grid)
 </div>
 
 <!-- Overlapping with fixed coordinates and size -->
-<div class="basegrid" style="--w:4;">
+<div class="basegrid fixed" style="--w:4;">
 	<div style="--x:1;--y:1;--w:8;--h:8"></div>
 	<div style="--x:3;--y:3;--w:8;--h:8"></div>
 	<div style="--x:5;--y:5;--w:8;--h:8"></div>

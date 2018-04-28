@@ -3,10 +3,9 @@
 	--x: auto; --y: auto; --w: 1; --h: 1;
 }
 .basegrid{
-	--t: calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg));
 	width: var(--gw);
 	display: grid;
-	grid-template-columns: repeat(var(--gc), var(--t));
+	grid-template-columns: repeat(var(--gc), 1fr);
 	grid-gap: var(--gg);
 	grid-auto-rows: var(--gr);
 	grid-auto-flow: row dense;
@@ -16,11 +15,11 @@
 	grid-row: var(--y) / span var(--h);
 }
 .basegrid.fixed{
-	grid-auto-rows: var(--t);
+	grid-auto-rows: calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg));
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 940px) {
 	.basegrid.res{
-		--w: 100vw !important;
+		--gw: 100vw !important;
 		grid-auto-rows: none;
 	}
 }

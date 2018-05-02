@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" height="250" src="https://base.grid.studio/img/logo.png">
+  <img width="250" height="250" src="https://base.grid.studio/img/logo.png?raw=true">
 </p>
 
 # Basegrid 🛠 [![NPM version](https://badge.fury.io/js/basegrid.svg)](https://www.npmjs.com/package/basegrid) [![](https://data.jsdelivr.com/v1/package/npm/basegrid/badge?style=rounded)](https://www.jsdelivr.com/package/npm/basegrid)

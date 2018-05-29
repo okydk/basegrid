@@ -1,6 +1,6 @@
 {
   "name": "basegrid",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
   "main": "basegrid.css",
   "keywords": [

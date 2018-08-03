@@ -4,6 +4,7 @@
 }
 .basegrid{
 	width: var(--gw);
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(var(--gc), 1fr);
 	grid-gap: var(--gg);

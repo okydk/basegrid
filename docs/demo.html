@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>basegrid</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basegrid@latest"> -->
+	<link rel="stylesheet" href="./../basegrid.css">
+	<style>
+		.demo {
+			align-content: space-around;
+			justify-content: center;
+			--gw: 940px;
+			margin: 0 auto;
+			box-align: border-box;
+		}
+
+		.demo>div {
+			background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+		}
+
+		html,
+		body {
+			margin: 0;
+			font-family: "Helvetica Neue";
+			font-weight: 400;
+			line-height: 1.5em;
+			background: #eee;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<div class="basegrid demo fixed" style="--gr: 1.5rem;" v-if="type === 'fixed'" :style="grid">
+			<div style="--w:6;"></div>
+			<div style="--h:4;"> aoisdjo asdo ajsodai jas dasdasd ad asd asda sdsa daadsa dasda as da sd ojdaosi joaisj </div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style="--w:6; --h:10">asdasdas</div>
+			<div style="">asd asd as</div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style=""></div>
+			<div style="">asdasd</div>
+			<div style=""></div>
+			<div style="">asdads</div>
+		</div>
+		<div class="basegrid demo fixed" v-if="type === 'masonry'" :style="grid">
+			<div style="--h:2"></div>
+			<div style="--h:5"></div>
+			<div style="--h:3"></div>
+			<div style="--h:7"></div>
+			<div style="--h:4"></div>
+			<div style="--h:3"></div>
+			<div style="--h:3"></div>
+			<div style="--h:7"></div>
+			<div style="--h:4"></div>
+			<div style="--h:3"></div>
+			<div style="--h:5"></div>
+			<div style="--h:3"></div>
+			<div style="--h:7"></div>
+			<div style="--h:4"></div>
+			<div style="--h:3"></div>
+			<div style="--h:5"></div>
+			<div style="--h:3"></div>
+			<div style="--h:3"></div>
+			<div style="--h:5"></div>
+		</div>
+		<div class="basegrid demo" v-if="type === 'simple'" :style="grid">
+			<div style="--w:12"></div>
+			<div style="--w:6"></div>
+			<div style="--w:6"></div>
+			<div style="--w:4"></div>
+			<div style="--w:4"></div>
+			<div style="--w:4"></div>
+			<div style="--w:3"></div>
+			<div style="--w:3"></div>
+			<div style="--w:3"></div>
+			<div style="--w:3"></div>
+			<div style="--w:2"></div>
+			<div style="--w:2"></div>
+			<div style="--w:2"></div>
+			<div style="--w:2"></div>
+			<div style="--w:2"></div>
+			<div style="--w:2"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+			<div style="--w:1"></div>
+		</div>
+		<div class="basegrid demo fixed" style="--gw: 1200px;" v-if="type === 'layout'" :style="grid">
+			<div style="--x:1;--y:1;--w:12;--h:3;padding:var(--gg)">
+				LOGO + Navigation
+			</div>
+			<div style="--x:1;--y:4;--w:4;--h:9;padding:var(--gg)">
+				Sidebar
+			</div>
+			<div style="--x:5;--y:4;--w:8;--h:9;padding:var(--gg)">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil cupiditate dolorem cum, repudiandae minus!
+				Inventore harum et velit, mollitia eaque neque delectus facere voluptates assumenda. Aliquid iusto pariatur rem
+				ex.
+			</div>
+		</div>
+		<div class="basegrid demo fixed" v-if="type === 'overlap'" :style="grid">
+			<div style="--x:1;--y:1;--w:8;--h:8"></div>
+			<div style="--x:3;--y:3;--w:8;--h:8"></div>
+			<div style="--x:5;--y:5;--w:8;--h:8"></div>
+		</div>
+	</div>
+</body>
+
+</html>

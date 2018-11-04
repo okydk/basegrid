@@ -1,16 +1,16 @@
 {
-  "name": "basegrid",
-  "version": "0.0.7",
-  "description": "Dynamic CSS-grid base on CSS-variables. 🔥",
-  "main": "basegrid.css",
-  "keywords": [
-    "basegrid",
-    "css-grid",
-    "css-vars",
-    "dynamic",
-    "grid",
-    "grid.studio"
-  ],
-  "author": "Stefan Rasmussen",
-  "license": "MIT"
+	"name": "basegrid",
+	"version": "0.0.8",
+	"description": "Dynamic CSS-grid base on CSS-variables. 🔥",
+	"main": "basegrid.css",
+	"keywords": [
+		"basegrid",
+		"css-grid",
+		"css-vars",
+		"dynamic",
+		"grid",
+		"grid.studio"
+	],
+	"author": "Stefan Rasmussen",
+	"license": "MIT"
 }

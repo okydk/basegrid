@@ -1,8 +1,14 @@
-:root{
-	--gw: 940px; --gg: 20px; --gc: 12; --gr: auto;
-	--x: auto; --y: auto; --w: 1; --h: 1;
+:root {
+	--gw: 940px;
+	--gg: 20px;
+	--gc: 12;
+	--gr: auto;
+	--x: auto;
+	--y: auto;
+	--w: auto;
+	--h: auto;
 }
-.basegrid{
+.basegrid {
 	width: var(--gw);
 	max-width: 100%;
 	display: grid;
@@ -11,21 +17,21 @@
 	grid-auto-rows: var(--gr);
 	grid-auto-flow: row dense;
 }
-.basegrid>div{
-  grid-column: var(--x) / span var(--w);
+.basegrid > div {
+	grid-column: var(--x) / span var(--w);
 	grid-row: var(--y) / span var(--h);
 }
-.basegrid.fixed{
-	grid-auto-rows: calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg));
+.basegrid.fixed {
+	grid-auto-rows: minmax(calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg)), max-content);
 }
 @media screen and (max-width: 940px) {
-	.basegrid.res{
+	.basegrid.res {
 		--gw: 100vw !important;
 		grid-auto-rows: none;
 	}
 }
 @media screen and (max-width: 600px) {
-	.basegrid.res{
+	.basegrid.res {
 		display: block;
 	}
 }

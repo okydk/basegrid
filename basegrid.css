@@ -22,6 +22,9 @@
 	grid-row: var(--y) / span var(--h);
 }
 .basegrid.fixed {
+	grid-auto-rows: calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg));
+}
+.basegrid.expand {
 	grid-auto-rows: minmax(calc((var(--gw) + var(--gg)) / var(--gc) - var(--gg)), max-content);
 }
 @media screen and (max-width: 940px) {
